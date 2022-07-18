@@ -11,3 +11,7 @@ export class Welcome extends React.Component {
         return <p>welcome {this.props.name}!</p>
     }
 }
+
+Welcome.defaultProps = {
+    name: 'Homie'
+}; 
