@@ -8,6 +8,6 @@ export class Message extends React.Component {
 
 export class Welcome extends React.Component {
     render(){
-        return <p>welcome {this.props.name}</p>
+        return <p>welcome {this.props.name}!</p>
     }
 }
