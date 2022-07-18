@@ -8,7 +8,13 @@ export class Message extends React.Component {
 
 export class Welcome extends React.Component {
     render(){
-        return <p>welcome {this.props.name}!</p>
+        return (
+            <div>
+        <p>welcome {this.props.name}!</p>
+        <p>Your age is {this.props.age}</p>
+        </div>
+        )
+
     }
 }
 
