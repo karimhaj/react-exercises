@@ -13,9 +13,9 @@ export class Welcome extends React.Component {
         <p>welcome {this.props.name}!</p>
 
         {
-        this.props.age
+        this.props.age && this.props.age > 18 && this.props.age < 65
         ?<Age age = {this.props.age}/>
-        : <p>age is not present</p>
+        : <p>age is not between 19 and 64</p>
         }
 
         </div>
