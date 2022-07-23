@@ -40,13 +40,3 @@ export class Age extends React.Component{
 Welcome.defaultProps = {
     name: 'Homie'
 }; 
-
-
-// Conditional Rendering - 02
-// Modify the Welcome component so that the Age component is rendered only if the age prop is present.
-
-// {
-//     this.props.age in Age 
-//     ?  <Age age = {this.props.age}/>
-//     : false
-// }  
