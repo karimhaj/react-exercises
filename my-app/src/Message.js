@@ -41,3 +41,4 @@ export class Age extends React.Component{
 Welcome.defaultProps = {
     name: 'john'
 }; 
+
