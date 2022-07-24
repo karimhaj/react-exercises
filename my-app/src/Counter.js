@@ -17,6 +17,13 @@ export default class Counter extends React.Component{
     }
 
     render(){
-        return <h1>{this.state.count}</h1>
+        return <CounterDisplay count= {this.state.count} />
+    }
+}
+
+export class CounterDisplay extends React.Component{
+
+    render(){
+        return <h1>{this.props.count}</h1>
     }
 }
