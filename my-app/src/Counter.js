@@ -28,6 +28,7 @@ export default class Counter extends React.Component{
         return (<div>
             <CounterDisplay count= {this.state.count} />
             <ClickCounter increment= {this.handleCounterIncrement}/>
+            <ClickTracker />
         </div>
         )
     }
@@ -46,4 +47,27 @@ export class ClickCounter extends React.Component{
 render(){
     return <button onClick = {this.props.increment}>increment count</button>
 }
+}
+
+export class ClickTracker extends React.Component{
+
+    buttonEventHandler= (event) =>{
+        this.setState(state=>{
+            return {name: event.target.className}
+        })
+
+    }
+
+    state = {
+        name: 'click one of those buttons!'
+    }
+
+    render() {
+        return (<div>
+            <button className='one' onClick={this.buttonEventHandler}>one</button>
+            <button className='two' onClick={this.buttonEventHandler}>two</button>
+            <button className='three' onClick={this.buttonEventHandler}>three</button>
+            <h1>{this.state.name}</h1>
+        </div>)
+    }
 }
