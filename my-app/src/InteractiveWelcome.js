@@ -16,7 +16,7 @@ export class InteractiveWelcome extends React.Component{
         return (
             <div>
                 <Welcome name={this.state.username}/>
-                <input type= "text" value={this.state.username} onChange={this.handleUsernameInputChange}/>
+                <input type= "text" name= "username" value={this.state.username} onChange={this.handleUsernameInputChange}/>
             </div>
         )
     }
