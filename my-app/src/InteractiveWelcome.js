@@ -21,3 +21,15 @@ export class InteractiveWelcome extends React.Component{
         )
     }
 }
+
+export class Login extends React.Component{
+    render(){
+        return (
+            <div>
+                <input type= "text" name= "username" value= ""  />
+                <input type= "paassword" name= "password" value= ""  />
+                <input type= "checkbox" name= "remember" value= ""  />
+            </div>
+        )
+    }
+}
