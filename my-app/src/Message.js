@@ -12,7 +12,6 @@ export class Welcome extends React.Component {
             <div>
         <p>welcome {this.props.name}!</p>
         {/* <Age age = {this.props.age}/>
-
         {
         this.props.age > 18 && this.props.age < 65 && this.props.name === 'John'
         ?<Age age = {this.props.age}/>
@@ -40,4 +39,3 @@ export class Age extends React.Component{
 // Welcome.defaultProps = {
 //     name: 'john'
 // }; 
-
