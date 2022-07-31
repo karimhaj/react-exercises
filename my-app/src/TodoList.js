@@ -18,7 +18,8 @@ export class TodoList extends React.Component{
         event.preventDefault() 
 
         this.setState({
-            items: [...this.state.items, this.state.name]
+            items: [...this.state.items, this.state.name],
+            name: ""
         })
     }
 
