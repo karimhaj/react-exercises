@@ -46,7 +46,7 @@ export class Login extends React.Component{
 
     render(){
         const buttonStyle ={
-            backgroundColor: this.state.password.length<8 ? "rgb(255,0,0)" : "rgb(0,255,0)"
+            backgroundColor: this.state.password.length<8 ? "rgb(255,0,0)" : "rgb(0,255,0)",
         }
 
         return (
