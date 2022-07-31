@@ -23,12 +23,21 @@ export class TodoList extends React.Component{
         })
     }
 
+    resetList = (event) =>{
+        event.preventDefault()
+        this.setState({
+            items: [],
+            name: ""
+        })
+    }
+
     render(){
         return (<div>
         <ul>{this.state.items.map((item, index)=> <li key={index}>{item}</li>)}</ul>
         <form onSubmit={this.addElementToList}>
         <input type="text" name ="newItem" value={this.state.name} onChange={this.handleControlledNameChange}/>
         <button type="submit" name="addToList">Add to list</button>
+        <button name="reset" onClick={this.resetList}>reset</button>
         </form>
         </div>)
     }
