@@ -11,7 +11,7 @@ export class TodoList extends React.Component{
         this.setState ({
             name: event.target.value
         })
-        return console.log(this.state)
+        // return console.log(this.state)
     }
 
     addElementToList = (event) =>{
