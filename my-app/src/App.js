@@ -5,7 +5,7 @@ export class App extends React.Component {
     render(){
         return(
             <div>
-                <TodoList />
+                <TodoList index ={1}/>
             </div>
         )
     }
