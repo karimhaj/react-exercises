@@ -51,16 +51,7 @@ export class TodoList extends React.Component {
 
     render() {
         return (<div>
-            <ul>{this.state.items.map((item, index) => <div><li key={index}>{item}</li>
-                <button onClick={(event)=>{
-                            event.preventDefault()
-                            console.log(event.target.li)
-                            this.state.items.splice(index, 1)
-                            this.setState({
-                                items: this.state.items,
-                                name: ""
-                            })
-                }}>remove {item}</button></div>)}</ul>
+            <ul>{this.props.render(this.state.items)}</ul>
             <form onSubmit={this.addElementToList}>
                 <input type="text" name="newItem" value={this.state.name} onChange={this.handleControlledNameChange} />
                 <button type="submit" name="addToList">Add to list</button>
