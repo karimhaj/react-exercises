@@ -33,21 +33,6 @@ export class TodoList extends React.Component {
         })
     }
 
-    // removeListElement = (event) =>{
-    //     event.preventDefault()
-    //     let indexOfItemToRemove = this.state.items.indexOf(this.state.name)
-
-    //     this.state.items.includes(this.state.name) ?
-    //     this.state.items.splice(indexOfItemToRemove,1)
-    //     : console.log('the input is not valid!')
-
-    //     this.setState({
-    //         items: this.state.items,
-    //         name: ""
-    //     })
-
-    // }
-
 
     render() {
         return (<div>
@@ -56,7 +41,6 @@ export class TodoList extends React.Component {
                 <input type="text" name="newItem" value={this.state.name} onChange={this.handleControlledNameChange} />
                 <button type="submit" name="addToList">Add to list</button>
                 <button name="reset" onClick={this.resetList}>reset</button>
-                {/* <button name="removeItem" onClick={this.removeListElement}>remove list element</button> */}
             </form>
         </div>)
     }
