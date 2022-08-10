@@ -4,10 +4,10 @@ import { LanguageContext } from "./LanguageContext";
 
 const strings = {
     it: {
-        helloInLanguage: 'ciao come stai?'
+        languageSelected: 'Italiano'
     },
     en: {
-        helloInLanguage: 'hello how are you?'
+        languageSelected: 'English'
     }
 }
 
@@ -20,7 +20,7 @@ export default class DisplayLanguage extends React.Component {
             <LanguageContext.Consumer>
             {language => {
                 return <div>
-                    {strings[language].helloInLanguage}
+                    <h1>{strings[language].languageSelected}</h1> 
                 </div>
             }
             }
