@@ -9,6 +9,7 @@ import { Container } from "./Container";
 import DisplayLanguage from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
 import { Welcome2 } from "./Welcome2";
+import { Sum } from "./Sum";
 
 const theName = <b>Clark</b>;
 
@@ -33,6 +34,7 @@ export class App extends React.Component {
                 <option value='en'>ENGLISH</option>
                 <option value='it'>ITALIANO</option>
             </select>
+                <Sum sum={[1,2,3,4,5,7,8,9,10]}/>
                 <Welcome2 name="Jimmy" />
                 <Container title="This awesome application">
                     <hr/>
