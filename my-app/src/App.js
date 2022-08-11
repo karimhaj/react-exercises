@@ -8,6 +8,7 @@ import "./index.css"
 import { Container } from "./Container";
 import DisplayLanguage from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
+import { Welcome2 } from "./Welcome2";
 
 const theName = <b>Clark</b>;
 
@@ -32,6 +33,7 @@ export class App extends React.Component {
                 <option value='en'>ENGLISH</option>
                 <option value='it'>ITALIANO</option>
             </select>
+                <Welcome2 name="Jimmy" />
                 <Container title="This awesome application">
                     <hr/>
                 <LanguageContext.Provider value={this.state.language}>
