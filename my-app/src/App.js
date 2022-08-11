@@ -4,11 +4,13 @@ import { Sum } from "./Sum";
 
 export class App extends React.Component {
 
+    //if the numbers prop is not set the logic in the sum component won't work properly
     render() {
         return (
             <div>
-                <Sum numbers={[1,2,3,4,5]}/>
+                <Sum />
             </div>
         )
     }
 }
+
