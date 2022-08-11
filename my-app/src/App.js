@@ -1,12 +1,12 @@
 import React from "react";
-import { Welcome2 } from "./Welcome2";
+import { Welcome } from "./Welcome";
 
 export class App extends React.Component {
 
     render() {
         return (
             <div>
-                <Welcome2 name="Erik" />
+                <Welcome name="Erik" />
             </div>
         )
     }
