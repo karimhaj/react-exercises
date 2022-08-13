@@ -1,5 +1,5 @@
 import React from "react";
-import { Login } from "./InteractiveWelcome";
+import { Login } from "./Login";
 
 export class App extends React.Component {
     render(){
