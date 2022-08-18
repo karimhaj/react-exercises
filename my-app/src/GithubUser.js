@@ -1,18 +1,32 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-export function GithubUser({name}){
-    const [username, setUsername] = useState({});
+export function GithubUser({ username }) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-    useEffect(()=>{
-        fetch(`https://api.github.com/users/${name}`)
-        .then(res => res.json())
-        .then(data=> setUsername(data))
-    },[name])
-
-    return(<div>
-        <h2>{username.name}</h2>
-        <h3>{username.id}</h3>
-        <h3>{username.login}</h3>
-        <img src={username.avatar_url} alt="github profile pic" />
-        </div>)
+  async function fetchGithubUser(username) {
+    setLoading(true);
+    setError(false);
+    try {
+      const response = await fetch(`https://api.github.com/users/${username}`);
+      const json = await response.json();
+      setData(json);
+    } catch (error) {
+      setError(error);
+      setData(null);
+    } finally {
+      setLoading(false);
+    }
+  }
+  useEffect(() => {
+    fetchGithubUser(username);
+  }, [username]);
+  return (
+    <span>
+      {loading && <h1>Loading...</h1>}
+      {error && <h1>An error has occurred</h1>}
+      {data && <h1>{data.name}</h1>}
+    </span>
+  );
 }
