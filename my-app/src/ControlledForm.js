@@ -23,7 +23,7 @@ export function ControlledForm (){
     return (<form>
                 <h3>My controlled form</h3>
                 <input onChange={handleInputChange} type= "text" name= "username" value={data.username}  />
-                <input onChange={handleInputChange} type= "paassword" name= "password" value={data.password} />
+                <input onChange={handleInputChange} type= "password" name= "password" value={data.password} />
                 <input onChange={handleInputChange} type= "checkbox" name= "remember" value={data.remember} />
                 </form>)
 }
