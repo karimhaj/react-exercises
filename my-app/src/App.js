@@ -1,12 +1,12 @@
 import React from "react";
-import { ControlledForm } from "./ControlledForm";
+import { CarDetails } from "./CarDetails";
 
 
 export class App extends React.Component {
     render(){
         return(
             <div>
-                <ControlledForm />
+                <CarDetails initialData={{ model: "Audi", year: 2019, color: "Green" }}/>
             </div>
         )
     }
