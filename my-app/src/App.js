@@ -1,12 +1,12 @@
 import React from "react";
-import {Counter} from "./Counter";
+import { FilteredList } from "./FilteredList";
 
 
 export class App extends React.Component {
     render(){
         return(
             <div>
-                <Counter initialValue={2} />
+                <FilteredList />
             </div>
         )
     }
