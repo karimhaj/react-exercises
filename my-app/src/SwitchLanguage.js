@@ -14,9 +14,12 @@ export class SwitchLanguage extends React.Component {
         })
     }
 
-
+    
 
     render() {
+
+        const language = this.state.language 
+
         return (
             <div>
                 <select value={this.state.value} onChange={this.handleLanguageChange}>
@@ -24,7 +27,7 @@ export class SwitchLanguage extends React.Component {
                 <option value='it'>ITALIANO</option>
             </select>
             <br />
-                <LanguageContext.Provider value={this.state.language}>
+                <LanguageContext.Provider value={language}>
                     <DisplayLanguage />
                     </LanguageContext.Provider> 
             </div>
