@@ -1,22 +1,17 @@
-import React from "react";
-import { TodoList } from "./TodoList";
+import { Route, Routes } from "react-router-dom";
+import { Welcome } from "./Welcome";
 
-export class App extends React.Component {
-    render() {
-        return (
-            <div>
-                <TodoList render={(array) => array.map((item, index) => <div><li key={index}>{item}</li><button onClick={(event) => {
-                    event.preventDefault()
-                    array.splice(index, 1)
-                    this.setState({
-                        items: array,
-                        name: ""
-                    })
-                }}>remove {item}</button></div>)} />
-            </div>
-        )
-    }
+export function App() {
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<Welcome name="Erik"/>} />
+      </Routes>
+    </div>
+  );
 }
+
+export default App;
 
 
 
