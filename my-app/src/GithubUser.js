@@ -1,7 +1,7 @@
 import { useGithubUser } from "./useGithubUser";
 
 export function GithubUser({name}){
-    const {user, error, isLoading} = useGithubUser(name)
+    const {user, error, isLoading, onRefresh} = useGithubUser(name)
 
     return(<div>
         {isLoading && <h3>Loading...</h3>}
@@ -12,5 +12,6 @@ export function GithubUser({name}){
         <h3>{user.login}</h3>
         <img src={user.avatar_url} alt="github profile pic" />   
         </div>}
+        <button onClick={onRefresh}>refresh user</button>
         </div>)
 }
